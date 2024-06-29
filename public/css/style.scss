@@ -6,6 +6,29 @@
   font-family: "medium";
 }
 
+*::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+*::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #7840eb;
+  border: none;
+}
+*::-webkit-scrollbar-thumb:active {
+  background: #161616;
+}
+*::-webkit-scrollbar-track {
+  background: #ccc;
+  border: 0px none #ffffff;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
 @font-face {
   font-family: bold;
   src: url(/public/font/Gotham-Font/GothamBold.ttf);
@@ -23,16 +46,19 @@ body {
 h1 {
   font-family: "bold";
   font-size: 4.2rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 h2 {
   font-family: "bold";
   font-size: 3rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 h3 {
   font-family: "bold";
   font-size: 1.2rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
 
 // Navbar
@@ -47,11 +73,12 @@ h3 {
   width: 90%;
   margin: auto;
 
-  h1 {
+  a {
+    font-family: "bold";
     color: #fff;
 
     span {
-        color: purple;
+      color: purple;
     }
   }
 }
@@ -70,10 +97,9 @@ h3 {
   justify-content: space-between;
   height: 64px;
   align-items: center;
-  
+
   h1 {
-    
-    color: #7840EB;
+    color: #7840eb;
   }
 }
 
@@ -93,7 +119,7 @@ h3 {
 }
 
 .navbar a {
-    color: #7840EB;
+  color: #7840eb;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease-in-out;
@@ -240,7 +266,7 @@ h3 {
 .section-one {
   background-image: url("/public/img/angel0.jpg");
   .text-box {
-    color: #7840EB;
+    color: #7840eb;
   }
 }
 
@@ -248,35 +274,41 @@ h3 {
   background-image: url("/public/img/angel1.jpg");
 }
 
-.section-weapon {
-  display: flex;
-  align-items: center;
-  color: #fff;
-  padding: 100px 0;
-  margin: 0 auto;
-  background: #BB45E5;
+.lazy {
+  background-image: url("/public/img/landscape.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #7840eb;
 
-  .text-box {
+  .section-weapon {
     display: flex;
-    flex-direction: column;
-    color: #fff;
-    text-align: start;
-    width: 50%;
+    align-items: center;
+    padding: 100px 0;
+    margin: 0 auto;
 
-    h2,
-    h3 {
-      width: 60%;
-      margin: 10px;
+    .text-box {
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      width: 50%;
+
+      h2,
+      h3 {
+        width: 60%;
+        margin: 10px;
+        text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+      }
     }
-  }
 
-  .img-box {
-    width: 50%;
+    .img-box {
+      width: 50%;
 
-    img {
-      width: 40%;
-      margin: 10px;
-      border-radius: 20px;
+      img {
+        width: 40%;
+        margin: 10px;
+        border-radius: 20px;
+      }
     }
   }
 }
@@ -311,22 +343,22 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #BB45E5;
   padding-bottom: 200px;
 
   .text-box {
     text-align: center;
-    color: #fff;
+    color: #7840eb;
     width: 60%;
 
     h2,
     h3 {
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
       margin: 10px;
     }
   }
 
   img {
-    width: 25%;
+    width: 20%;
     margin: 10px;
     border-radius: 20px;
   }
@@ -337,12 +369,12 @@ h3 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: #fff;
+  background: #7840eb;
   padding-top: 100px;
 
   .text-box {
     text-align: center;
-    color: #000;
+    color: #fff;
     width: 60%;
     margin-bottom: 50px;
 
@@ -375,7 +407,7 @@ h3 {
   background-color: #ffffff;
   width: calc((100% - 90px) / 4);
   margin: 0 30px 30px 0;
-  border: 1px solid #BB45E5;
+  border: none;
   border-radius: 6px;
   box-sizing: border-box;
   min-width: 200px;
@@ -418,7 +450,7 @@ h3 {
 }
 .cards__item--category {
   padding: 10px;
-  background-color: #e2a9e5;
+  background-color: #481f9b;
   color: #ffffff;
   border-radius: 6px 6px 0px 0px;
   font-size: 16px;
@@ -429,12 +461,12 @@ h3 {
   text-align: center;
   padding: 20px 20px 0px;
   font-size: 76px;
-  color: #632c65;
+  color: #7840eb;
 }
 .cards__item--desc {
   padding: 20px;
   font-size: 14px;
   text-align: left;
-  font-weight: 500;
-  color: #4b384c;
+  font-weight: 100;
+  color: #7840eb;
 }
