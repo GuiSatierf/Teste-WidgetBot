@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EvoCode</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <script src="https://kit.fontawesome.com/ef31ccd9e2.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <link rel="stylesheet" href="/public/css/style.css">
@@ -83,39 +84,126 @@
 
 
     <div class="section-six">
-        <div class="text-box reveal-nine">
-            <h1>Everything you need to animate.</h1>
-            <h3>For the first time you can draw, animate, edit, and composite in a powerful animation studio you can
-                take everywhere.</h3>
+
+        <div class="icons">
+            <a href="#openModal-one"><img src="/public/img/avatar1.jpg" alt=""></a>
+            <a href="#openModal-two"><img src="/public/img/avatar2.jpg" alt=""></a>
         </div>
-        <div class="cards">
-            <div class="card_container">
-                <a href="#" class="cards__item reveal-ten">
-                    <div class="cards__item--category">Category Title</div>
-                    <div class="cards__item--img"><i class="fas fa-gift"></i></div>
-                    <div class="cards__item--desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                        pulvinar enim id.</div>
-                </a>
-                <a href="#" class="cards__item reveal-eleven">
-                    <div class="cards__item--category">Carrot</div>
-                    <div class="cards__item--img"><i class="fas fa-carrot"></i></div>
-                    <div class="cards__item--desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                        faucibus diam a nulla varius tempus. Sed ut augue massa. Nunc.</div>
-                </a>
-                <a href="#" class="cards__item reveal-twelve">
-                    <div class="cards__item--category">Category Title</div>
-                    <div class="cards__item--img"><i class="fas fa-coffee"></i></div>
-                    <div class="cards__item--desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                        faucibus diam a nulla varius tempus. </div>
-                </a>
-                <a href="#" class="cards__item reveal-thirteen">
-                    <div class="cards__item--category">Dog</div>
-                    <div class="cards__item--img"><i class="fas fa-dog"></i></div>
-                    <div class="cards__item--desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-                        malesuada augue ut metus laoreet, ac porta nibh sagittis.</div>
-                </a>
+
+        <div id="openModal-one" class="modalDialog">
+
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <div class="container">
+                    <div class="carousel">
+                        <input type="radio" name="slides" checked="checked" id="slide-a1">
+                        <input type="radio" name="slides" id="slide-a2">
+                        <input type="radio" name="slides" id="slide-a3">
+                        <ul class="carousel__slides">
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="/public/img/a1.jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Kazuha vulgo kazuza
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="/public/img/a2.jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Haniel me da uma skin no lol
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="/public/img/a3.jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Nunca pedi nada
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <ul class="carousel__thumbnails">
+                            <li>
+                                <label for="slide-a1"><img src="/public/img/a1.jpg" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-a2"><img src="/public/img/a2.jpg" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-a3"><img src="/public/img/a3.jpg" alt=""></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div id="openModal-two" class="modalDialog">
+
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <div class="container">
+                    <div class="carousel">
+                        <input type="radio" name="slides" checked="checked" id="slide-b1">
+                        <input type="radio" name="slides" id="slide-b2">
+                        <input type="radio" name="slides" id="slide-b3">
+                        <ul class="carousel__slides">
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="/public/img/b1.jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Ayakinha UwU
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="/public/img/b2.jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum
+                                    </figcaption>
+                                </figure>
+                            </li>
+                            <li class="carousel__slide">
+                                <figure>
+                                    <div>
+                                        <img src="/public/img/b3.jpg" alt="">
+                                    </div>
+                                    <figcaption>
+                                        Lorem ipsum
+                                    </figcaption>
+                                </figure>
+                            </li>
+                        </ul>
+                        <ul class="carousel__thumbnails">
+                            <li>
+                                <label for="slide-b1"><img src="/public/img/b1.jpg" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-b2"><img src="/public/img/b2.jpg" alt=""></label>
+                            </li>
+                            <li>
+                                <label for="slide-b3"><img src="/public/img/b3.jpg" alt=""></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script>
@@ -144,13 +232,6 @@
 
             ScrollReveal().reveal(".reveal-seven", createRevealConfig({ delay: 0, opacity: 0, distance: "0px" }));
             ScrollReveal().reveal(".reveal-eight", createRevealConfig({ delay: 100, opacity: 0, distance: "0px" }));
-
-            ScrollReveal().reveal(".reveal-nine", createRevealConfig({ delay: 0, origin: "top" }));
-
-            ScrollReveal().reveal(".reveal-ten", createRevealConfig({ delay: 300, origin: "bottom" }));
-            ScrollReveal().reveal(".reveal-eleven", createRevealConfig({ delay: 600, origin: "bottom" }));
-            ScrollReveal().reveal(".reveal-twelve", createRevealConfig({ delay: 900, origin: "bottom" }));
-            ScrollReveal().reveal(".reveal-thirteen", createRevealConfig({ delay: 1200, origin: "bottom" }));
         });
     </script>
 </body>
