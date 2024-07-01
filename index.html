@@ -57,9 +57,7 @@
                 <h3>Sword attacks are the middle ground of melee weapons. The damage and speed of their attacks are
                     comparable to those of Polearms, though with a shorter reach.</h3>
             </div>
-            <div class="img-box">
-                <img class="reveal-four" src="/public/img/sword.png" alt="">
-            </div>
+            <img class="reveal-four" src="/public/img/sword.png" alt="">
         </div>
 
         <div class="section-four section-weapon">
@@ -67,12 +65,10 @@
                 <h2>Polearms</h2>
                 <h3>Polearm have fast attacks, long forward reach, and deal moderate damage per hit.</h3>
             </div>
-            <div class="img-box">
-                <img class="reveal-six" src="/public/img/polearms.png" alt="">
-            </div>
+            <img class="reveal-six" src="/public/img/polearms.png" alt="">
         </div>
 
-        <div class="section-five">
+        <div class="section-five section-weapon">
             <div class="text-box reveal-seven">
                 <h2>Catalysts</h2>
                 <h3>Due to their magical nature, all Normal and Charged Attacks performed with a Catalyst are considered
@@ -85,11 +81,17 @@
 
     <div class="section-six">
 
-        <div class="icons">
-            <a href="#openModal-one"><img src="/public/img/avatar1.jpg" alt=""></a>
-            <a href="#openModal-two"><img src="/public/img/avatar2.jpg" alt=""></a>
+        <div class="text-box reveal-nine">
+            <h1>Our projects</h1>
         </div>
 
+        <!-- Modal Buttons -->
+        <div class="icons">
+            <a href="#openModal-one"><img class="reveal-ten" src="/public/img/avatar1.jpg" alt=""></a>
+            <a href="#openModal-two"><img class="reveal-eleven" src="/public/img/avatar2.jpg" alt=""></a>
+        </div>
+
+        <!-- Modal content -->
         <div id="openModal-one" class="modalDialog">
 
             <div>
@@ -207,6 +209,21 @@
     </div>
 
     <script>
+        let currentSlide = 1;
+        const totalSlides = 3;
+
+        setInterval(() => {
+            document.getElementById(`slide-a${currentSlide}`).checked = true;
+            currentSlide = currentSlide % totalSlides + 1;
+        }, 4000);
+
+        setInterval(() => {
+            document.getElementById(`slide-b${currentSlide}`).checked = true;
+            currentSlide = currentSlide % totalSlides + 1;
+        }, 4000);
+    </script>
+
+    <script>
         document.addEventListener('DOMContentLoaded', () => {
             const commonConfig = {
                 distance: "30px",
@@ -232,6 +249,10 @@
 
             ScrollReveal().reveal(".reveal-seven", createRevealConfig({ delay: 0, opacity: 0, distance: "0px" }));
             ScrollReveal().reveal(".reveal-eight", createRevealConfig({ delay: 100, opacity: 0, distance: "0px" }));
+
+            ScrollReveal().reveal(".reveal-nine", createRevealConfig({ delay: 0, origin: "right" }));
+            ScrollReveal().reveal(".reveal-ten", createRevealConfig({ delay: 300, origin: "right" }));
+            ScrollReveal().reveal(".reveal-eleven", createRevealConfig({ delay: 600, origin: "right" }));
         });
     </script>
 </body>
