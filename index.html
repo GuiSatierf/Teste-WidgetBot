@@ -209,26 +209,29 @@
     </div>
 
     <script>
-        let currentSlide = 1;
-        const totalSlides = 3;
-
-        setInterval(() => {
-            document.getElementById(`slide-a${currentSlide}`).checked = true;
-            currentSlide = currentSlide % totalSlides + 1;
-        }, 4000);
-
-        setInterval(() => {
-            document.getElementById(`slide-b${currentSlide}`).checked = true;
-            currentSlide = currentSlide % totalSlides + 1;
-        }, 4000);
-    </script>
-
-    <script>
         document.addEventListener('DOMContentLoaded', () => {
             const commonConfig = {
                 distance: "30px",
                 easing: "ease-in-out",
             };
+
+            const revealElements = [
+                { selector: ".reveal-one", config: { delay: 0, origin: "top" } },
+                { selector: ".reveal-two", config: { delay: 0, origin: "top" } },
+                { selector: ".reveal-three", config: { delay: 0, opacity: 0, distance: "0px" } },
+                { selector: ".reveal-four", config: { delay: 100, opacity: 0, distance: "0px" } },
+                { selector: ".reveal-five", config: { delay: 0, opacity: 0, distance: "0px" } },
+                { selector: ".reveal-six", config: { delay: 100, opacity: 0, distance: "0px" } },
+                { selector: ".reveal-seven", config: { delay: 0, opacity: 0, distance: "0px" } },
+                { selector: ".reveal-eight", config: { delay: 100, opacity: 0, distance: "0px" } },
+                { selector: ".reveal-nine", config: { delay: 0, origin: "right" } },
+                { selector: ".reveal-ten", config: { delay: 300, origin: "right" } },
+                { selector: ".reveal-eleven", config: { delay: 600, origin: "right" } }
+            ];
+
+            revealElements.forEach(element => {
+                ScrollReveal().reveal(element.selector, createRevealConfig(element.config));
+            });
 
             function createRevealConfig(extraConfig = {}) {
                 return {
@@ -236,25 +239,9 @@
                     ...extraConfig
                 };
             }
-
-            ScrollReveal().reveal(".reveal-one", createRevealConfig({ delay: 0, origin: "top" }));
-
-            ScrollReveal().reveal(".reveal-two", createRevealConfig({ delay: 0, origin: "top" }));
-
-            ScrollReveal().reveal(".reveal-three", createRevealConfig({ delay: 0, opacity: 0, distance: "0px" }));
-            ScrollReveal().reveal(".reveal-four", createRevealConfig({ delay: 100, opacity: 0, distance: "0px" }));
-
-            ScrollReveal().reveal(".reveal-five", createRevealConfig({ delay: 0, opacity: 0, distance: "0px" }));
-            ScrollReveal().reveal(".reveal-six", createRevealConfig({ delay: 100, opacity: 0, distance: "0px" }));
-
-            ScrollReveal().reveal(".reveal-seven", createRevealConfig({ delay: 0, opacity: 0, distance: "0px" }));
-            ScrollReveal().reveal(".reveal-eight", createRevealConfig({ delay: 100, opacity: 0, distance: "0px" }));
-
-            ScrollReveal().reveal(".reveal-nine", createRevealConfig({ delay: 0, origin: "right" }));
-            ScrollReveal().reveal(".reveal-ten", createRevealConfig({ delay: 300, origin: "right" }));
-            ScrollReveal().reveal(".reveal-eleven", createRevealConfig({ delay: 600, origin: "right" }));
         });
     </script>
+
 </body>
 
 </html>
