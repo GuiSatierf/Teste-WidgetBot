@@ -76,10 +76,6 @@ h3 {
   a {
     font-family: "bold";
     color: #fff;
-
-    span {
-      color: purple;
-    }
   }
 }
 
@@ -87,6 +83,8 @@ h3 {
   position: absolute;
   width: 100%;
   background: none;
+  backdrop-filter: blur(3px);
+  padding: 10px 0;
   color: #fff;
   opacity: 0.85;
   z-index: 100;
@@ -95,12 +93,7 @@ h3 {
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  height: 64px;
   align-items: center;
-
-  h1 {
-    color: #7840eb;
-  }
 }
 
 .menu-items {
@@ -119,14 +112,13 @@ h3 {
 }
 
 .navbar a {
-  color: #7840eb;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
 
 .navbar a:hover {
-  color: #fff;
+  color: #7840eb;
 }
 
 @media (max-width: 768px) {
@@ -244,6 +236,15 @@ h3 {
 
 // Main content
 
+.transition {
+  position: absolute;
+  width: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  border: 2px solid #7840eb;
+}
+
 .section-start {
   display: flex;
   flex-direction: column;
@@ -264,22 +265,22 @@ h3 {
 }
 
 .section-one {
-  background-image: url("/public/img/angel0.jpg");
+  background-image: url("/public/img/angel0.png");
   .text-box {
-    color: #7840eb;
+    color: #fff;
   }
 }
 
 .section-two {
-  background-image: url("/public/img/angel1.jpg");
+  background-image: url("/public/img/angel1.png");
 }
 
 .lazy {
-  background-image: url("/public/img/landscape.jpg");
+  background-image: url("/public/img/landscape.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #7840eb;
+  color: #fff;
 
   .section-weapon {
     display: flex;
@@ -347,7 +348,7 @@ h3 {
 
   .text-box {
     text-align: center;
-    color: #7840eb;
+    color: #fff;
     width: 60%;
 
     h2,
